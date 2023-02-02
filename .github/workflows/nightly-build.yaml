@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: ${{ github.repository_owner == 'ProjectPythia' }}
+    if: ${{ github.repository_owner == 'ktyle' }}
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
       environment_file: 'environment.yml'
@@ -16,7 +16,7 @@ jobs:
       build_command: 'make -j4 html'
 
   link-check:
-    if: ${{ github.repository_owner == 'ProjectPythia' }}
+    if: ${{ github.repository_owner == 'ktyle' }}
     uses: ./.github/workflows/sphinx-link-checker.yaml
     with:
       path_to_source: 'portal'

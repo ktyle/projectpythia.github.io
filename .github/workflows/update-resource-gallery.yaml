@@ -8,7 +8,7 @@ on:
 jobs:
   validate-user-submission:
     if: |
-      github.repository == 'ProjectPythia/projectpythia.github.io'
+      github.repository == 'ktyle/projectpythia.github.io'
       && contains(github.event.issue.labels.*.name, 'resource-gallery-submission')
     runs-on: ubuntu-latest
     defaults:
